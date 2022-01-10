@@ -1,0 +1,111 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
+    <title>DPS Payment Calculator</title>
+  </head>
+  <body>
+    <main class="container">
+      <heading class="section__header">
+        <h1 class="heading__primary">DPS Payment Calculator</h1>
+        <p class="heading__secondary">
+          Calculate your DPS Fortnightly Payment and your Working Credit
+          Balance.
+        </p>
+        <p class="js-results__description hidden"></p>
+      </heading>
+      <div class="flex">
+        <section class="section__calcBtn">
+          <button class="btn calculate__btn">Calculate Payment</button>
+        </section>
+        <section class="section__calculator flex hidden">
+          <h3 class="calculator__heading">
+            Enter amounts below in whole dollars ($)
+          </h3>
+          <form class="calculator__form flex" name="calculator">
+            <div class="gross-income-amount form-fields grid">
+              <label class="form-text" for="gross-income">Gross Income</label>
+              <input
+                type="text"
+                id="gross-income"
+                placeholder="1000"
+                name="gross-income"
+                required
+              />
+            </div>
+            <div class="hourly-rate-amount form-fields grid">
+              <label class="form-text" for="hourly-rate"
+                >Hourly Rate Amount</label
+              >
+              <input
+                type="text"
+                id="hourly-rate"
+                placeholder="47"
+                name="hourly-rate"
+                required
+              />
+            </div>
+            <div class="income-free-amount form-fields grid">
+              <label class="form-text" for="income-free"
+                >Income Free Amount</label
+              >
+              <input
+                type="text"
+                id="income-free"
+                placeholder="180"
+                name="income-free"
+                required
+              />
+            </div>
+            <div class="current-credit-balance form-fields grid">
+              <label class="form-text" for="credit-balance"
+                >Working Credit Balance</label
+              >
+              <input
+                type="text"
+                id="credit-balance"
+                placeholder="200"
+                name="credit-balance"
+                required
+              />
+            </div>
+            <div class="btn-container flex">
+              <button class="btn calc-btn js-submit__btn">SUBMIT</button>
+              <button class="btn calc-btn js-clear__btn">CLEAR FORM</button>
+            </div>
+          </form>
+        </section>
+        <section class="results__display hidden">
+          <div class="results__container grid">
+            <div class="results flex">
+              <h3 class="heading__tertiary">Working Credit Accrued</h3>
+              <p class="credit__accrued">0</p>
+            </div>
+            <div class="results flex">
+              <h3 class="heading__tertiary">Working Credit Used</h3>
+              <p class="credit__used">0</p>
+            </div>
+            <div class="results flex">
+              <h3 class="heading__tertiary">DPS payment</h3>
+              <p class="dps__payment">$0</p>
+            </div>
+            <div class="results flex">
+              <h3 class="heading__tertiary">Working Credit Balance</h3>
+              <p class="credit__balance">0</p>
+            </div>
+            <button class="btn calc-btn recalcBtn">Re-calculate</button>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
